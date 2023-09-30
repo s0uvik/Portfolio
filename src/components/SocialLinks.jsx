@@ -54,7 +54,7 @@ const SocialLinks = () => {
             <li key={id}>
               <a
                 href={href}
-                className=" sm:hidden flex justify-between items-center w-full p-6 text-back"
+                className=" sm:hidden text-white flex justify-between items-center w-full p-6 text-back"
                 target="_blank"
                 rel="noreferrer"
               >

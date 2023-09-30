@@ -5,38 +5,46 @@ import todo from "../assets/portfolio/todo.png";
 import bank from "../assets/portfolio/bank.png";
 import countriesData from "../assets/portfolio/countries data.png";
 import calculator from "../assets/portfolio/calculator.png";
+import tmdb from "../assets/portfolio/tmdb.png";
+import amazon from "../assets/portfolio/amazon.png";
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
+      name: "College Website",
       src: colage,
       demo:"https://uitbu.netlify.app"
     },
     {
       id: 2,
+      name: "Text Utils",
       src: textUtils,
-      demo:"https://myreacttextutils.netlify.app"
+      demo:"https://text-utils-souvik.vercel.app/"
     },
     {
       id: 3,
+      name: "Todo App",
       src: todo,
       demo:"https://todoappbysouvik.netlify.app"
     },
     {
       id: 4,
+      name: "Simple Bank app",
       src: bank,
       demo:"https://bankists-app.netlify.app"
     },
     {
       id: 5,
-      src: countriesData,
-      demo:"https://get-countries-data-souvik.netlify.app"
+      name: "Amazon Clone",
+      src: amazon,
+      demo:"https://amazon-clone-by-souvik.vercel.app/"
     },
     {
       id: 6,
-      src: calculator,
-      demo:""
+      name: "TMDB clone",
+      src: tmdb,
+      demo:"https://tmdb-clone-by-souvik.vercel.app/"
     },
   ];
 
@@ -54,11 +62,12 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, demo }) => (
+          {portfolios.reverse().map(({ id, name, src, demo }) => (
             <div
               key={id}
-              className=" border-2 shadow-md h-[250px] overflow-hidden  shadow-gray-600 rounded-lg"
+              className=" border-2 shadow-md h-[290px] overflow-hidden  shadow-gray-600 rounded-lg"
             >
+              <h1 className=" text-center p-1">{name}</h1>
               <img
                 src={src}
                 alt=""
@@ -68,7 +77,7 @@ const Portfolio = () => {
               <div className="flex items-center gap-2 justify-center">
                 <a href={demo} target="_blank" className=" text-center ml-3 mt-2 border-[0.5px] w-1/2 px-2 py-1 rounded-2xl duration-200 hover:scale-105">
                 <button>
-                  Demo
+                  Demo &#8599;
                 </button>
                 </a>
                <a href="" className=" text-center w-1/2 border-[0.5px] mt-2 mr-3 px-2 py-1 rounded-2xl duration-200 hover:scale-105">

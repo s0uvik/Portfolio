@@ -13,15 +13,14 @@ const About = () => {
           </p>
         </div>
 
-        <p className="text-xl sm:mt-20">
-          Hi, my name is Souvik and I'm a highly skilled web developer with over
-          3 years of experience in HTML, CSS, JavaScript, React, Figma,
-          Bootstrap, and Firebase. I have a strong passion for creating
-          user-friendly and visually appealing websites that are both functional
-          and efficient. I have an eye for design and enjoy implementing the
-          latest trends in web development. My proficiency in front-end web
-          development allows me to build seamless web experiences that are
-          optimized for desktop and mobile devices.
+        <p className="text-xl text-justify sm:mt-20">
+          As a front-end developer, I specialize in building user-friendly and
+          visually appealing websites and applications. With expertise in:- -
+          HTML - CSS - JavaScript, - React - Typescript - Tailwind CSS My
+          passion for coding and problem-solving drives me to continuously learn
+          and stay up-to-date with the latest front-end technologies. I am a
+          collaborative team player who enjoys working with designers,
+          developers, and stakeholders to deliver exceptional user experiences.
         </p>
 
         <br />
