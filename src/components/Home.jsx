@@ -10,8 +10,8 @@ const Home = () => {
       name="home"
       className="w-full bg-gradient-to-b from-black via-black to-gray-800"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center px-4 md:flex-row">
-        <div className=" flex flex-col justify-center mb-10 sm:pt-6 mt-36 md:mt-60">
+      <div className="  max-w-screen-lg mx-auto flex flex-col items-center justify-center px-4 md:flex-row">
+        <div className="  flex flex-col justify-center mb-10 sm:pt-6 mt-36 md:mt-60">
           <h2 className="text-4xl sm:text-7xl font-bold text-white">
             I'm a Frontend Developer
           </h2>
@@ -45,7 +45,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="">
+        <div className=" md: mt-40">
           <img
             src={HeroImage}
             alt="my profile"
