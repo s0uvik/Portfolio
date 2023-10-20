@@ -45,7 +45,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className=" md: mt-40">
+        <div className=" md:mt-40">
           <img
             src={HeroImage}
             alt="my profile"
