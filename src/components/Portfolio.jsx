@@ -1,10 +1,8 @@
 import React from "react";
-import colage from "../assets/portfolio/college.png";
+import college from "../assets/portfolio/college.png";
 import textUtils from "../assets/portfolio/textutils.png";
 import todo from "../assets/portfolio/todo.png";
-import bank from "../assets/portfolio/bank.png";
-import countriesData from "../assets/portfolio/countries data.png";
-import calculator from "../assets/portfolio/calculator.png";
+import youtube from "../assets/portfolio/youtube.png";
 import tmdb from "../assets/portfolio/tmdb.png";
 import amazon from "../assets/portfolio/amazon.png";
 
@@ -13,7 +11,7 @@ const Portfolio = () => {
     {
       id: 1,
       name: "College Website",
-      src: colage,
+      src: college,
       demo:"https://uitbu.netlify.app"
     },
     {
@@ -30,19 +28,19 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      name: "Simple Bank app",
-      src: bank,
-      demo:"https://bankists-app.netlify.app"
+      name: "YouTube",
+      src: youtube,
+      demo:"https://youtubeclone-eight-delta.vercel.app/"
     },
     {
       id: 5,
-      name: "Amazon Clone",
+      name: "E-commerce App",
       src: amazon,
       demo:"https://amazon-clone-by-souvik.vercel.app/"
     },
     {
       id: 6,
-      name: "TMDB clone",
+      name: "Movie Search App",
       src: tmdb,
       demo:"https://tmdb-clone-by-souvik.vercel.app/"
     },
@@ -71,7 +69,7 @@ const Portfolio = () => {
               <img
                 src={src}
                 alt=""
-                className="object-contain h-48 w-96 rounded-md mx-auto duration-200 hover:scale-105"
+                className="object-cover h-48 w-96 rounded-md mx-auto duration-200 hover:scale-105"
               />
 
               <div className="flex items-center gap-2 justify-center">

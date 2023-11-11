@@ -63,13 +63,13 @@ const Experience = () => {
       style: "shadow-blue-500",
     },
     {
-      id: 8,
+      id: 9,
       src: redux,
       title: "Redux",
       style: "shadow-gray-400",
     },
     {
-      id: 8,
+      id: 10,
       src: router,
       title: "Router",
       style: "shadow-gray-400",

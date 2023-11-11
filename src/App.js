@@ -8,7 +8,7 @@ import SocialLinks from "./components/SocialLinks";
 
 function App() {
   return (
-    <div className="">
+    <div className=" max-w-[1700px] mx-auto relative">
       <NavBar />
       <Home />
       <About />
