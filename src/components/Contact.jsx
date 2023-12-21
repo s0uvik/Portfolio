@@ -8,6 +8,7 @@ const Contact = () => {
   const [formData, setformData] = useState({
     user_name: "",
     user_email: "",
+    user_mobile: "",
     message: "",
   });
 
@@ -25,7 +26,7 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_7y1g7kj",
+        "service_7xxc8bc",
         "template_283hu72",
         form.current,
         "DPWKIizwpXbGrapQc"
@@ -37,13 +38,14 @@ const Contact = () => {
         },
         (error) => {
           console.log(error.text);
-          alert("Oops! Somthing Went Wrong");
+          alert("Oops! Something Went Wrong");
         }
       );
 
     setformData({
       user_name: "",
       user_email: "",
+      user_mobile: "",
       message: "",
     });
     console.log(formData);
@@ -52,22 +54,22 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white pt-20"
+      className="w-full h-screen bg-[#04152D] p-4 text-white pt-20"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Cotact
+            Contact
           </p>
           <p className="py-6">Submit the form below to get in touch with me</p>
         </div>
 
-        <div className=" flex justify-center items-center">
+        <div className=" flex justify-center items-center ">
           <form
             action=""
             ref={form}
             onSubmit={sendEmail}
-            className=" flex flex-col w-full md:w-1/2"
+            className=" flex flex-col gap-2 w-full md:w-1/2 bg-[#23272F] p-6 mb-6 rounded-lg"
           >
             <input
               type="text"
@@ -87,6 +89,15 @@ const Contact = () => {
               placeholder="Enter your email"
               className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             />
+            <input
+              type="number"
+              required
+              value={formData.user_mobile}
+              onChange={handleChange}
+              name="user_mobile"
+              placeholder="Enter your mobile number"
+              className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+            />
             <textarea
               required
               value={form.message}
@@ -100,7 +111,7 @@ const Contact = () => {
             <button
             value="Send"
             type="submit"
-            className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
               Let's talk
             </button>
           </form>
