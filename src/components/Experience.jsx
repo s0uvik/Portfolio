@@ -10,6 +10,8 @@ import sass from "../assets/sass.png";
 import ts from "../assets/ts.png";
 import redux from "../assets/redux.png";
 import router from "../assets/router.png";
+import node from "../assets/node.png";
+import docker from "../assets/docker.png"
 
 const Experience = () => {
   const techs = [
@@ -74,14 +76,26 @@ const Experience = () => {
       title: "Router",
       style: "shadow-gray-400",
     },
+    {
+      id: 11,
+      src: node,
+      title: "Node JS",
+      style: "shadow-green-400",
+    },
+    {
+      id: 12,
+      src: docker,
+      title: "docker",
+      style: "shadow-blue-300",
+    },
   ];
 
   return (
     <div
       name="experience"
-      className=" bg-[#04152D] w-full pt-2 sm:pt-6 "
+      className=" bg-[#04152D] w-full pt-2 mt-4 sm:pt-6"
     >
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white mt-20 ">
+      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white ">
         <div>
           <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
             Experience
@@ -106,3 +120,4 @@ const Experience = () => {
 };
 
 export default Experience;
+

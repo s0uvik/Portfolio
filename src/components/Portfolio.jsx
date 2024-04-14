@@ -12,55 +12,61 @@ const Portfolio = () => {
       id: 1,
       name: "College Website",
       src: college,
-      demo:"https://uitbu.netlify.app"
+      demo: "https://uitbu.netlify.app",
+      code: "#",
     },
     {
       id: 2,
       name: "Text Utils",
       src: textUtils,
-      demo:"https://text-utils-souvik.vercel.app/"
+      demo: "https://text-utils-souvik.vercel.app/",
+      code: "#",
     },
     {
       id: 3,
       name: "Todo App",
       src: todo,
-      demo:"https://todoappbysouvik.netlify.app"
+      demo: "https://todoappbysouvik.netlify.app",
+      code: "#",
     },
     {
       id: 4,
       name: "YouTube",
       src: youtube,
-      demo:"https://youtubeclone-eight-delta.vercel.app/"
+      demo: "https://youtubeclone-eight-delta.vercel.app/",
+      code: "https://github.com/s0uvik/Video-Streaming-App",
     },
     {
       id: 5,
       name: "E-commerce App",
       src: amazon,
-      demo:"https://amazon-clone-by-souvik.vercel.app/"
+      demo: "https://amazon-clone-by-souvik.vercel.app/",
+      code: "https://github.com/s0uvik/E-commerce-App",
     },
     {
       id: 6,
       name: "Movie Search App",
       src: tmdb,
-      demo:"https://tmdb-clone-by-souvik.vercel.app/"
+      demo: "https://tmdb-clone-by-souvik.vercel.app/",
+      code: "https://github.com/s0uvik/Movie-Search-App",
     },
   ];
 
   return (
     <div
       name="portfolio"
-      className="bg-[#04152D] w-full text-white md:h-screen pt-16 md:pt-36"
+      className="bg-[#04152D] w-full text-white md:h-screen"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Portfolio
           </p>
-          <p className="py-6">Check out some of my work right here</p>
+          <p className=" mt-6">Check out some of my work right here</p>
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.reverse().map(({ id, name, src, demo }) => (
+          {portfolios.reverse().map(({ id, name, src, demo, code }) => (
             <div
               key={id}
               className=" border-2 shadow-md h-[290px] overflow-hidden  shadow-gray-600 rounded-lg"
@@ -73,16 +79,22 @@ const Portfolio = () => {
               />
 
               <div className="flex items-center gap-2 justify-center">
-                <a href={demo} target="_blank" className=" text-center ml-3 mt-2 border-[0.5px] w-1/2 px-2 py-1 rounded-2xl duration-200 hover:scale-105">
-                <button>
+                <a
+                  href={demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center ml-3 mt-2 border-[0.5px] w-1/2 px-2 py-1 rounded-2xl duration-200 hover:scale-105"
+                >
                   Demo &#8599;
-                </button>
                 </a>
-               <a href="" className=" text-center w-1/2 border-[0.5px] mt-2 mr-3 px-2 py-1 rounded-2xl duration-200 hover:scale-105">
-               <button >
+                <a
+                  href={code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center w-1/2 border-[0.5px] mt-2 mr-3 px-2 py-1 rounded-2xl duration-200 hover:scale-105"
+                >
                   Code
-                </button>
-               </a>
+                </a>
               </div>
             </div>
           ))}
