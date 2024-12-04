@@ -1,7 +1,7 @@
 import React from "react";
 import college from "../assets/portfolio/college.png";
-import textUtils from "../assets/portfolio/textutils.png";
-import todo from "../assets/portfolio/todo.png";
+import taskWave from "../assets/portfolio/taskWave.png";
+import instaHub from "../assets/portfolio/instaHub.png";
 import youtube from "../assets/portfolio/youtube.png";
 import tmdb from "../assets/portfolio/tmdb.png";
 import amazon from "../assets/portfolio/amazon.png";
@@ -15,40 +15,41 @@ const Portfolio = () => {
       demo: "https://uitbu.netlify.app",
       code: "#",
     },
+
     {
       id: 2,
-      name: "Text Utils",
-      src: textUtils,
-      demo: "https://text-utils-souvik.vercel.app/",
-      code: "#",
-    },
-    {
-      id: 3,
-      name: "Todo App",
-      src: todo,
-      demo: "https://todoappbysouvik.netlify.app",
-      code: "#",
-    },
-    {
-      id: 4,
       name: "YouTube",
       src: youtube,
       demo: "https://youtubeclone-eight-delta.vercel.app/",
       code: "https://github.com/s0uvik/Video-Streaming-App",
     },
     {
-      id: 5,
+      id: 3,
       name: "E-commerce App",
       src: amazon,
       demo: "https://amazonclone04.vercel.app",
       code: "https://github.com/s0uvik/E-commerce-App",
     },
     {
-      id: 6,
+      id: 4,
       name: "Movie Search App",
       src: tmdb,
       demo: "https://appnamovie04.vercel.app/",
       code: "https://github.com/s0uvik/Movie-Search-App",
+    },
+    {
+      id: 5,
+      name: "TaskWave",
+      src: taskWave,
+      demo: "https://taskwave04.vercel.app/",
+      code: "https://github.com/s0uvik/TaskWave",
+    },
+    {
+      id: 6,
+      name: "InstaHub",
+      src: instaHub,
+      demo: "https://instahub04.vercel.app/",
+      code: "https://github.com/s0uvik/InstaHub",
     },
   ];
 
