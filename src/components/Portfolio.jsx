@@ -40,14 +40,14 @@ const Portfolio = () => {
       id: 5,
       name: "E-commerce App",
       src: amazon,
-      demo: "https://amazon-clone-by-souvik.vercel.app/",
+      demo: "https://amazonclone04.vercel.app",
       code: "https://github.com/s0uvik/E-commerce-App",
     },
     {
       id: 6,
       name: "Movie Search App",
       src: tmdb,
-      demo: "https://tmdb-clone-by-souvik.vercel.app/",
+      demo: "https://appnamovie04.vercel.app/",
       code: "https://github.com/s0uvik/Movie-Search-App",
     },
   ];
