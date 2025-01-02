@@ -1,36 +1,67 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
+const links = [
+  {
+    id: 1,
+    link: "home",
+  },
+  {
+    id: 2,
+    link: "about",
+  },
+  {
+    id: 3,
+    link: "portfolio",
+  },
+  {
+    id: 4,
+    link: "experience",
+  },
+  {
+    id: 5,
+    link: "contact",
+  },
+];
+
 const NavBar = () => {
   const [nav, setNav] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  const links = [
-    {
-      id: 1,
-      link: "home",
-    },
-    {
-      id: 2,
-      link: "about",
-    },
-    {
-      id: 3,
-      link: "portfolio",
-    },
-    {
-      id: 4,
-      link: "experience",
-    },
-    {
-      id: 5,
-      link: "contact",
-    },
-  ];
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== "undefined") {
+        if (window.scrollY > lastScrollY) {
+          // if scroll down hide the navbar
+          setIsVisible(false);
+        } else {
+          // if scroll up show the navbar
+          setIsVisible(true);
+        }
 
+        // remember current page location to use in the next move
+        setLastScrollY(window.scrollY);
+      }
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
 
   return (
-    <div className="flex justify-between items-center h-20 px-4 text-white bg-transparent  w-full bg-gradient-to-b from-black to-gray-800">
+    <div
+      className={`flex fixed top-0 left-0 z-50 transition-transform duration-300 w-[100%] justify-between items-center h-20 px-4 text-white bg-[#04152D]/90 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div>
         <h1 className=" text-3xl sm:text-5xl font-signature ml-2">
           Souvik Sarkar
